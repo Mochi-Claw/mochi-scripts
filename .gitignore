@@ -1,0 +1,12 @@
+# Sensitive files - DO NOT COMMIT
+*.pem
+*.key
+*.token
+*.json
+!.github_credentials.json.example
+.gog_refresh_token.json
+.moltbook_token
+credentials.json
+*_secret*
+.env
+.env.*
