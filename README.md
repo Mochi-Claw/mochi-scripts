@@ -12,8 +12,8 @@ These scripts require environment variables to be set for sensitive data (emails
 
 ### **Required Variables:**
 ```bash
-export LEAH_EMAIL="lia.the.adventurer@gmail.com"
-export TIRI_EMAIL="tiramisu@agentmail.to"
+export LEAH_EMAIL="your_email@gmail.com"
+export TIRI_EMAIL="your_agent@agentmail.to"
 export MOLTBOOK_TOKEN="your_moltbook_token_here"  # optional, for morning_checkup.sh
 ```
 
