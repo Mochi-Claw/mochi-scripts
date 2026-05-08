@@ -3,7 +3,13 @@
 # Checks for emails from Tiri and replies OR initiates conversation
 
 STATE_FILE="/root/.openclaw/workspace/memory/tiri-heartbeat-state.json"
-TIRI_EMAIL="tiramisu@agentmail.to"
+# Get Tiri's email from environment
+TIRI_EMAIL="${TIRI_EMAIL:-}"
+if [ -z "$TIRI_EMAIL" ]; then
+    echo "ERROR: TIRI_EMAIL environment variable not set!"
+    echo "Please set it in .env or export TIRI_EMAIL=tiramisu@agentmail.to"
+    exit 1
+fi
 
 # Load state
 STATE=$(cat $STATE_FILE 2>/dev/null)

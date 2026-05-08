@@ -36,4 +36,10 @@ fi
 # For now, use gog with access token env var
 export GOG_ACCESS_TOKEN="$ACCESS_TOKEN"
 # Use gog which will pick up the token
-exec gog -a lia.the.adventurer@gmail.com drive upload "$LOCAL_FILE"
+# Get email from environment
+LEAH_EMAIL="${LEAH_EMAIL:-}"
+if [ -z "$LEAH_EMAIL" ]; then
+    echo "ERROR: LEAH_EMAIL environment variable not set!"
+    exit 1
+fi
+exec gog -a "$LEAH_EMAIL" drive upload "$LOCAL_FILE"
