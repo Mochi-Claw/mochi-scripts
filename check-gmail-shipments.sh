@@ -7,7 +7,7 @@
 LEAH_EMAIL="${LEAH_EMAIL:-}"
 if [ -z "$LEAH_EMAIL" ]; then
     echo "ERROR: LEAH_EMAIL environment variable not set!"
-    echo "Please set it in .env or export LEAH_EMAIL=your_email@gmail.com"
+    echo "Please set it (e.g., export LEAH_EMAIL=your_email@gmail.com)"
     exit 1
 fi
 

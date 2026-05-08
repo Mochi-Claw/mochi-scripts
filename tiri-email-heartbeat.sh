@@ -7,7 +7,7 @@ STATE_FILE="/root/.openclaw/workspace/memory/tiri-heartbeat-state.json"
 TIRI_EMAIL="${TIRI_EMAIL:-}"
 if [ -z "$TIRI_EMAIL" ]; then
     echo "ERROR: TIRI_EMAIL environment variable not set!"
-    echo "Please set it in .env or export TIRI_EMAIL=tiramisu@agentmail.to"
+    echo "Please set it (e.g., export TIRI_EMAIL=tiramisu@agentmail.to)"
     exit 1
 fi
 

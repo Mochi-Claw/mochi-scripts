@@ -10,3 +10,4 @@ credentials.json
 *_secret*
 .env
 .env.*
+!.env.example
