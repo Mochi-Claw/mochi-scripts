@@ -42,11 +42,19 @@ LEAH_EMAIL="${input_email:-lia.the.adventurer@gmail.com}"
 echo "LEAH_EMAIL=$LEAH_EMAIL" >> "$CONFIG_FILE"
 echo "" >> "$CONFIG_FILE"
 
+# Also create .env in scripts directory for runtime
+echo "LEAH_EMAIL=$LEAH_EMAIL" > /root/.openclaw/scripts/.env
+chmod 600 /root/.openclaw/scripts/.env
+echo "✅ Also configured /root/.openclaw/scripts/.env for runtime"
+echo ""
+
 # Ask for TIRI_EMAIL
 echo -n "Enter Tiri's AgentMail address [tiramisu@agentmail.to]: "
 read -r input_tiri
 TIRI_EMAIL="${input_tiri:-tiramisu@agentmail.to}"
 echo "TIRI_EMAIL=$TIRI_EMAIL" >> "$CONFIG_FILE"
+# Also append to scripts/.env
+echo "TIRI_EMAIL=$TIRI_EMAIL" >> /root/.openclaw/scripts/.env
 echo "" >> "$CONFIG_FILE"
 
 # Optional: Moltbook token
