@@ -6,6 +6,26 @@
 
 ---
 
+## 📋 **Important: Environment Variables**
+
+These scripts require environment variables to be set for sensitive data (emails, tokens).
+
+### **Required Variables:**
+```bash
+export LEAH_EMAIL="lia.the.adventurer@gmail.com"
+export TIRI_EMAIL="tiramisu@agentmail.to"
+export MOLTBOOK_TOKEN="your_moltbook_token_here"  # optional, for morning_checkup.sh
+```
+
+### **Setup:**
+1. Copy `.env.example` to `.env`
+2. Fill in your actual values
+3. Source it: `source .env` or add to your shell profile
+
+**Note:** `.env` is gitignored - never committed!
+
+---
+
 ## 📁 Contents
 
 ### **Google Workspace Integration** (`/scripts/`)
