@@ -2,6 +2,12 @@
 # Google Drive upload helper - uses persistent refresh token
 # Usage: gog_drive_upload <local_file_path> [remote_name]
 
+# Load environment variables from .env file if present
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [ -f "$SCRIPT_DIR/.env" ]; then
+    source "$SCRIPT_DIR/.env"
+fi
+
 CONFIG_FILE="/root/.openclaw/workspace/.gog_refresh_token.json"
 
 if [[ ! -f "$CONFIG_FILE" ]]; then

@@ -2,6 +2,12 @@
 # Tiri Email Heartbeat using AgentMail via Mochi's scripts
 # Checks for emails from Tiri and auto-replies or initiates conversation
 
+# Load environment variables from .env file if present
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [ -f "$SCRIPT_DIR/.env" ]; then
+    source "$SCRIPT_DIR/.env"
+fi
+
 STATE_FILE="/root/.openclaw/workspace/memory/tiri-heartbeat-state.json"
 # Get Tiri's email from environment
 TIRI_EMAIL="${TIRI_EMAIL:-}"

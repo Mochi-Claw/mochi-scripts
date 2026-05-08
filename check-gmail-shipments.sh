@@ -3,6 +3,12 @@
 # Scans for messages from dragonflynotifications.awsapps.com and JLCNC
 # Auto-labels and stars them, then reports findings
 
+# Load environment variables from .env file if present
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [ -f "$SCRIPT_DIR/.env" ]; then
+    source "$SCRIPT_DIR/.env"
+fi
+
 # Get email from environment (set LEAH_EMAIL in .env)
 LEAH_EMAIL="${LEAH_EMAIL:-}"
 if [ -z "$LEAH_EMAIL" ]; then
